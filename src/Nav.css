@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Fraunces:opsz@9..144&display=swap');
+#navContainer {
+    width: 100%;
+    border-bottom: 1px solid black;
+    
+}
+#navContainer #navItems {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
+}
+#navContainer #navItems #titulo {
+    color: black;
+    font-family: 'Abyssinica';
+    text-transform: uppercase;
+    font-weight: 100;
+}
+nav {
+    display: flex;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 60px;
+    align-items: center;
+    font-family: 'Abyssinica';
+    font-weight: 100;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.greeting {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.greeting:hover {
+    transform: scale(1.1);
+    transition: 2s;
+    cursor: pointer;
+}
