@@ -1,27 +1,20 @@
 import CartWidget from './CartWidget';
+import NavBarItems from './NavBarItems';
 
-const NavBar = () => {
+const NavBar = ({title}) => {
+    let secciones = ['Home', 'Productos', 'Nosotros', 'Contacto']
     return (
         <div id='navContainer'>
             <div id='navItems'>
-            <h1 id='titulo'>Atenti</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Inicio</a>        
-                    </li>
-                    <li>
-                        <a href="#">Productos</a>
-                    </li>
-                    <li>
-                        <a href="#">Nosotros</a>
-                    </li>
-                    <li>
-                        <a href="#">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-            <CartWidget />
+                <h1 id='titulo'>{title}</h1>
+                <nav>
+                    <ul>
+                        {
+                            secciones.map((opt, index) => <NavBarItems key={index} opcion={opt}/>)
+                        }
+                    </ul>
+                </nav>
+                <CartWidget />
             </div>
         </div>
     )

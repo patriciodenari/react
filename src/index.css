@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.itemListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 100px 250px;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  background-color: coral;
+  width: 250px;
+  height: 110px;
+}
+.card-info h2 {
+  margin-bottom: 0;
+  padding-left: 10px;
+}
+.card-info h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+.itemDetailContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+.itemDetail {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  background-color: coral;
+  width: 700px;
+  height: 300px;
+  justify-content: flex-start;
+}
+
+.itemDetail img {
+  padding-left: 100px;
+}
+
+.card-info-detail {
+  padding-left: 60px;
+}
