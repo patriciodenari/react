@@ -1,9 +1,10 @@
-const NavBarItems = ({ opcion }) => {
+/* const NavBarItems = ({ opcion }) => {
   return (
     <div>
-      <li><a href="/products">{opcion}</a></li>
+      <li><a href="/category/">{opcion}</a></li>
     </div>
   );
 };
 
 export default NavBarItems;
+ */

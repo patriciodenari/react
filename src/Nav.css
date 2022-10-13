@@ -2,6 +2,9 @@
 #navContainer {
     width: 100%;
     border-bottom: 1px outset black;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.882);
+
 }
 #navContainer #navItems {
     width: 100%;
@@ -11,10 +14,17 @@
     gap: 250px;
 }
 #navContainer #navItems #titulo {
-    color: black;
+    color: white;
     font-family: 'Abyssinica';
     text-transform: uppercase;
     font-weight: 100;
+    text-decoration: none;
+}
+
+#navContainer #navItems #nav-cart a {
+    display: flex;
+    text-decoration: none;
+    color: white;
 }
 nav {
     display: flex;
@@ -27,20 +37,18 @@ nav ul {
     font-family: 'Abyssinica';
     font-weight: 100;
 }
-nav ul li a {
+nav ul a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 20px;
     text-transform: uppercase;
 }
-
+.active {
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid white;
+}
 .greeting {
     display: flex;
     justify-content: center;
     padding-top: 20px;
-}
-.greeting:hover {
-    transform: scale(1.1);
-    transition: 2s;
-    cursor: pointer;
 }

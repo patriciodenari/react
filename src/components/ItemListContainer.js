@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
 import productos from "./mock/productsMock";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = ({greeting}) => {
     const [items, setItems] = useState([]);
     // estado
 
+    const { categoryName } = useParams();
 
 
     // efecto
     useEffect(() => {
         const traerProductos = () => {
             return new Promise ((resolve, reject) => {
+                const prodFiltrados = productos.filter((prod) => prod.category === categoryName);
+                const prod = categoryName ? prodFiltrados : productos;
                 setTimeout(() => {
-                    resolve(productos)
-                }, 1000);
+                    resolve(prod);
+                }, 500);
             });
         };
         traerProductos()
@@ -25,7 +29,7 @@ const ItemListContainer = ({greeting}) => {
             .catch((error) => {
                 console.log(error);
             })
-    }, []) ;
+    }, [categoryName]) ;
 
     // console.log(items);
 

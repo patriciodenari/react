@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 243, 245);
 }
 
 code {
@@ -16,7 +17,25 @@ code {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 100px 250px;
+  margin: 60px 250px;
+}
+#itemsContainer a {
+  text-decoration: none;
+  color: black;
+}
+.itemListItems {
+  width: 260px;
+  border-radius: 6px;
+}
+.itemListItems:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
+  box-shadow: rgb(255, 135, 157) 2px 2px 2px 2px;
+}
+.itemListItems img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .article {
   display: flex;
@@ -25,10 +44,12 @@ code {
 .card-info {
   display: flex;
   flex-direction: column;
-  background-color: coral;
-  width: 250px;
+  background-color:rgb(254, 208, 215);
   height: 110px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
+
 .card-info h2 {
   margin-bottom: 0;
   padding-left: 10px;
@@ -41,22 +62,59 @@ code {
 .itemDetailContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 200px;
+  align-items: center;
+  height: 90vh;
 }
 .itemDetail {
   display: flex;
   align-items: center;
-  gap: 100px;
-  background-color: coral;
+  gap: 60px;
+  background-color: rgb(254, 208, 215);
   width: 700px;
   height: 300px;
   justify-content: flex-start;
+  border-radius: 5px;
+  border: 2px solid black;
 }
 
 .itemDetail img {
-  padding-left: 100px;
+  padding-left: 20px;
+  width: 260px;
+  height: 200px;
+  border-radius: 5px;
 }
 
-.card-info-detail {
-  padding-left: 60px;
+.count-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.count-btn button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.count-btn button {
+  background-color: rgb(255, 135, 157);
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.count-btn p {
+  font-size: 20px;
+}
+
+.add-btn {
+  background-color: rgb(255, 135, 157);
+  color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px;
+  cursor: pointer;
 }
