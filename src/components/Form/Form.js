@@ -4,7 +4,6 @@ import { CartContext } from "../../context/CartContext";
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'; 
 import dataBase from "../../services/firebaseConfig";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const Form = () => {
 
@@ -61,9 +60,8 @@ const Form = () => {
         setMail2(e.target.value);
         const mail1 = document.getElementById('mail1');
         const mail2 = document.getElementById('mail2');
-        const checkMail = document.getElementById('check-mail')
 
-        if (mail2.value != mail1.value) {
+        if (mail2.value !== mail1.value) {
             document.getElementById('btnEnviar').disabled = true;
         } else {
             document.getElementById('btnEnviar').disabled = false;
