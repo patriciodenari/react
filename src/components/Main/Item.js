@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const Item = ({prod}) => {
-    console.log();
     return(
         <div id="itemsContainer">
             <Link to={`/item/${prod.id}`}>
@@ -13,8 +12,7 @@ const Item = ({prod}) => {
                     </div>
                 </article>
             </Link>
-        </div>
-        
+        </div> 
     )
 }
 

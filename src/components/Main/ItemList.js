@@ -1,10 +1,10 @@
 import Item from "./Item";
 
-const ItemList = (props) => {
+const ItemList = ({items}) => {
     return(
         <div className="itemListContainer">
             {
-                props.items.map((prod) => {
+                items.map((prod) => {
                     return(
                         <Item prod={prod} key={prod.id}/>
                     )
