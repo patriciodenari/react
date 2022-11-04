@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD_XYrcW0vfxaCMLS-VzM4gWGtUKZbFyqM",
-  authDomain: "atenti2.firebaseapp.com",
-  projectId: "atenti2",
-  storageBucket: "atenti2.appspot.com",
-  messagingSenderId: "797148465970",
-  appId: "1:797148465970:web:391ce04e23d828ee70e52b"
+  apiKey: REACT_APP_API_KEY,
+  authDomain: REACT_APP_AUTH_DOMAIN,
+  projectId: REACT_APP_PROJECT_ID,
+  storageBucket: REACT_APP_STORAGE,
+  messagingSenderId: REACT_APP_MESSAGING,
+  appId: REACT_APP_APP_ID
 };
 
 
