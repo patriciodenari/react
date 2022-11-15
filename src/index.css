@@ -229,6 +229,16 @@ code {
 .dis {
   cursor: not-allowed;
 }
+
+.notShow {
+  display: none;
+}
+.show {
+  display: block;
+}
+.label-mail {
+  color: red;
+}
 /* CART */
 
 #cartContainer {

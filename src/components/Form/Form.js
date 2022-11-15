@@ -60,11 +60,18 @@ const Form = () => {
         setMail2(e.target.value);
         const mail1 = document.getElementById('mail1');
         const mail2 = document.getElementById('mail2');
+        const checkMail = document.getElementById('check-mail');
 
         if (mail2.value !== mail1.value) {
             document.getElementById('btnEnviar').disabled = true;
+            checkMail.classList.remove('notShow');
+            checkMail.classList.add('show');
+            mail2.classList.add('label-mail')
         } else {
             document.getElementById('btnEnviar').disabled = false;
+            checkMail.classList.remove('show');
+            checkMail.classList.add('notShow');
+            mail2.classList.remove('label-mail')
         }
     };
 
@@ -104,6 +111,7 @@ const Form = () => {
                 <div className="label">
                     <label htmlFor="mail2">Ingrese nuevamente su E-mail</label>
                     <input id="mail2" type='text' name="mail" onChange={handleChangeMail2} value={mail2} placeholder='nombre@example.com' required></input>
+                    <p id="check-mail" className="notShow">Los mails no coinciden!</p>
                 </div>
                 <div className="label">
                     <label htmlFor="celular">Ingrese su N° de celular</label>

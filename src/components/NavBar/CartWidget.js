@@ -9,7 +9,7 @@ const CartWidget = () => {
         <>
             <div>
                 <FontAwesomeIcon icon={faCartShopping} className='fa-lg' />
-                <span>{totalUnidades() >= 1 ? totalUnidades() : ''}</span>
+                <span> {totalUnidades() >= 1 ? totalUnidades() : ''}</span>
             </div>
         </>
     )

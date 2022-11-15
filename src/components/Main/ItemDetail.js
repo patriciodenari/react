@@ -9,7 +9,7 @@ const ItemDetail = ({ item }) => {
 
     const { addToCart, cantProdCarrito } = useContext(CartContext);
 
-    const prueba = (numero) => {
+    const addOne = (numero) => {
         setUnidades(numero);
         addToCart(item, numero);
     }
@@ -26,7 +26,7 @@ const ItemDetail = ({ item }) => {
                     <p>Stock: {item.stock} unidades.</p>
                     <h3>$ {item.price},00</h3>
                     {
-                        unidades === 0 ? <ItemCount prueba={prueba} stock={item.stock} initial={cantidad}/> : <Link to='/cart'>Ir al carrito</Link>
+                        unidades === 0 ? <ItemCount addOne={addOne} stock={item.stock} initial={cantidad}/> : <Link to='/cart'>Ir al carrito</Link>
                     }
                 </div>
             </article>
